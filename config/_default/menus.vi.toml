@@ -1,0 +1,39 @@
+############# Vietnamese navigation ##############
+
+# main menu
+[[main]]
+name = "Trang Chủ"
+pageRef = "/"
+weight = 1
+
+[[main]]
+name = "Bài đăng"
+pageRef = "/blog"
+weight = 2
+
+[[main]]
+name = "Chủ đề"
+pageRef = "/categories"
+weight = 3
+
+[[main]]
+name = "Tác giả"
+pageRef = "/authors"
+weight = 4
+
+[[main]]
+name = "About"
+pageRef = "/about"
+weight = 5
+
+
+# footer menu
+[[footer]]
+name = "About"
+pageRef = "/about"
+weight = 1
+
+[[footer]]
+name = "Tác giả"
+pageRef = "/authors"
+weight = 2
