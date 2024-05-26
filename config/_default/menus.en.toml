@@ -17,13 +17,13 @@ pageRef = "/categories"
 weight = 3
 
 [[main]]
-name = "About"
-pageRef = "/about"
+name = "Authors"
+pageRef = "/authors"
 weight = 4
 
 [[main]]
-name = "Authors"
-pageRef = "/authors"
+name = "About"
+pageRef = "/about"
 weight = 5
 
 
