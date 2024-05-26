@@ -62,9 +62,6 @@ jobs:
         with:
           path: ./public
 
-      - name: Add google crawler HTML
-        run: cp ./assets/googlecad80861c3fa2195.html ./public
-
   # Deployment job
   deploy:
     environment:
