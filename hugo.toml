@@ -6,7 +6,7 @@ title = "Trimerion Blog"
 # Your theme name
 theme = "hugoplate"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
-timeZone = "America/New_York"
+timeZone = "Asia/Bangkok"
 # post pagination
 paginate = 16 # see https://gohugo.io/extras/pagination/
 # post excerpt
@@ -18,7 +18,7 @@ hasCJKLanguage = false #  If hasCJKLanguage true, auto-detect Chinese/Japanese/K
 # default language
 defaultContentLanguage = 'en'
 # defaultContentLanguageInSubdir need to be true if you want to use the language code as a subdirectory and language specific 404 page
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 
 ########################### Services #############################
 [services]
@@ -171,3 +171,21 @@ lazy = true
 [[params.plugins.js]]
 link = "plugins/youtube-lite.js"
 lazy = true
+
+[languages]
+  [languages.en]
+  contentDir = 'content/english'
+  disabled = false
+  languageCode = 'en'
+  languageDirection = 'ltr'
+  languageName = 'English'
+  weight = 1
+
+  [languages.vi]
+  contentDir = 'content/vietnamese'
+  disabled = false
+  languageCode = 'vi'
+  languageDirection = 'ltr'
+  languageName = 'Vi'
+  weight = 2
+
