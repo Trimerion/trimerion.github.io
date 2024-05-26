@@ -1,7 +1,7 @@
 ---
 title: Nam Nguyen
 email: namberinos@gmail.com
-image: "/images/nam-nguyen-avatar.png"
+image: "/images/author-avatar/nam-nguyen-avatar.png"
 description: Nam Nguyen's author page
 social:
   - name: github
