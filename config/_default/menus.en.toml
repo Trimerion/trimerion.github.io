@@ -7,26 +7,29 @@ pageRef = "/"
 weight = 1
 
 [[main]]
-name = "About"
-pageRef = "/about"
-weight = 2
-
-[[main]]
 name = "Blog"
 pageRef = "/blog"
-weight = 3
-
-[[main]]
-name = "Contact"
-pageRef = "/contact"
-
-[[main]]
-name = "Authors"
-pageRef = "/authors"
+weight = 2
 
 [[main]]
 name = "Categories"
 pageRef = "/categories"
+weight = 3
+
+[[main]]
+name = "About"
+pageRef = "/about"
+weight = 4
+
+[[main]]
+name = "Authors"
+pageRef = "/authors"
+weight = 5
+
+[[main]]
+name = "Contact"
+pageRef = "/contact"
+weight = 6
 
 
 # footer menu
