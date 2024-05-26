@@ -2,7 +2,7 @@
 # Banner
 banner:
   title: "Trimerion Blog"
-  content: "Our blogging website"
+  content: "High quality technical blog"
   image: "/images/banner.png"
   button:
     enable: false

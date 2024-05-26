@@ -2,7 +2,7 @@
 # Banner
 banner:
   title: "Trimerion Blog"
-  content: "Trang blog"
+  content: "Blog về công nghệ kĩ thuật"
   image: "/images/banner.png"
   button:
     enable: false
