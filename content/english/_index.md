@@ -2,7 +2,7 @@
 # Banner
 banner:
   title: "Trimerion Blog"
-  content: "Our bloggin website"
+  content: "Our blogging website"
   image: "/images/banner.png"
   button:
     enable: false
@@ -11,18 +11,30 @@ banner:
 
 # Features
 features:
-  - title: "What's Included in Hugoplate"
+  - title: "Our Team"
     image: "/images/service-1.png"
-    content: "Hugoplate is a comprehensive starter template that includes everything you need to get started with your Hugo project. What's Included in Hugoplate"
+    content: "We are a group of students from Vietnam dedicated to producing high quality, informational articles about various technology and engineering topics. Here are some topics you can expect us to write about:"
     bulletpoints:
-      - "10+ Pre-build pages"
-      - "95+ Google Pagespeed Score"
-      - "Build with Hugo and TailwindCSS for easy and customizable styling"
-      - "Fully responsive on all devices"
-      - "SEO-optimized for better search engine rankings"
-      - "**Open-source and free** for personal and commercial use"
+      - "**Information Technology**"
+      - "**Web Development**"
+      - "**Cybersecurity**"
+      - "**Electrical Engineering** and **Embedded Systems**"
+      - "**Artificial Intelligence** and **Machine Learning**"
     button:
-      enable: false
-      label: "Get Started Now"
-      link: "#"
+      enable: true
+      label: "Read our articles"
+      link: "https://trimerion.github.io/blog"
+
+  - title: "Our Expertise"
+    image: "/images/service-2.png"
+    content: "Our team came from various backgrounds and have knowledge in various fields of technology. This website is a platform for us to share that knowledge to the world"
+    bulletpoints:
+      - "High quality articles"
+      - "Detailed technical information"
+      - "A bit of humor"
+    button:
+      enable: true
+      label: "Check out our team"
+      link: "https://trimerion.github.io/authors"
+
 ---
