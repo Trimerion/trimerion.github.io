@@ -48,7 +48,7 @@ The modules share some common signal path: *clk*, *rst* and *out*.
 - *rst*: The reset signal (resets everything back to 0)
 - *out*: The output of each modules (connected to the bus for communication between modules)
 
-I combined the *MAR* module from the original *SAP-1* architecture with the *RAM* module to make the memory module. Some signals may also have different names as I'm basing the architecture of this computer off of my memory of the *SAP-1* architecture.
+I combined the *MAR* module from the original *SAP-1* architecture with the *RAM* module to make the memory module. Some signals may also have different names as I'm basi  ng the architecture of this computer off of my memory of the *SAP-1* architecture.
 
 This won't be an exact copy of the *SAP-1* but it's close enough and it's still a functioning 8-bit computer.
 

@@ -688,7 +688,7 @@ That the core concept.
 
 ### Implement CRUD Operation
 
-##### Overview
+#### Overview
 
 1) **Controller (`AdminBlogPostsController`)**
 	- **`Add (HttpGet)` Action:**
@@ -705,7 +705,7 @@ That the core concept.
     - Currently, the `Add (HttpPost)` action just redirects back to the form (you'd implement adding the blog post to the database here).
 
 
-##### Visual Summary
+#### Visual Summary
 Create Page to Post Blog (AdminBlogPosts Controller with Add View)
 +  AdminBlogPosts Controller  
 +  Add Page
