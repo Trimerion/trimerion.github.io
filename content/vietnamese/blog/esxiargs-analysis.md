@@ -3,7 +3,7 @@ title: "Phân tích mã độc ESXiArgs"
 meta_title: ""
 description: "Học cách hoạt động của ransomware ESXiArgs bằng cách dịch ngược nó"
 date: 2024-04-01
-image: "/images/esxiargs/ghidra.png"
+image: "/images/esxiargs-analysis/ghidra.png"
 categories: ["An toàn thông tin", "Phần mềm cấp thấp"]
 author: "Nguyễn Bình Nam"
 tags: ["Dịch ngược", "Phân tích mã độc"]
