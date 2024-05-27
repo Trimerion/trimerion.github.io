@@ -1,16 +1,16 @@
 ---
 title: Thuan Ngo
 email: williamjacob@email.com
-image: "/images/avatar.png"
+image: "/images/author-avatar/stone-avatar.jpg"
 description: this is meta description
 social:
   - name: github
     icon: fa-brands fa-github
-    link: https://github.com
+    link: https://github.com/ngoducthuan
 
   - name: twitter
     icon: fa-brands fa-twitter
-    link: https://twitter.com
+    link: https://x.com/ThunNg116146
 
   - name: linkedin
     icon: fa-brands fa-linkedin
