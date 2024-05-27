@@ -17,4 +17,4 @@ social:
     link: https://www.linkedin.com/in/nam-nguyen-binh/
 ---
 
-Mình là 1 kĩ sư với chuyên môn trong khoa học máy tính và điện tử. Mình rất đam mê về hệ thống nhúng và robot. Chuyên môn của mình là trong lĩnh vực phần mềm cấp thấp, phần mềm nhúng, thiết kế điện tử, và an toàn thông tin.
+Mình là kĩ sư với chuyên môn trong khoa học máy tính và điện tử. Mình rất đam mê về hệ thống nhúng và robot. Chuyên môn của mình là trong lĩnh vực phần mềm cấp thấp, phần mềm nhúng, thiết kế điện tử, và an toàn thông tin.
