@@ -2,15 +2,13 @@
 title: "Making a simple 8-bit computer in FPGA"
 meta_title: ""
 description: "Details on a simple 8-bit computer implementation in FPGA"
-date: 2024-05-26
+date: 2024-02-26
 image: "/images/8bit-fpga/8bit-waveform.png"
 categories: ["Electronics"]
 author: "Nam Nguyen"
 tags: ["FPGA", "Computer Architecture"]
 draft: false
 ---
-
-## Overview
 
 Computers are mysterious. These machines have always been so enigmatic to most people. I can guarantee that if you ask someone on the road how computers work, they would most likely just answer "*I don't know*". 
 
