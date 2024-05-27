@@ -3,7 +3,7 @@ title: "ESXiArgs: An Analysis"
 meta_title: ""
 description: "Learning about how the ESXiArgs ransomware works through reverse engineering"
 date: 2024-04-01
-image: "/images/esxiargs/ghidra.png"
+image: "/images/esxiargs-analysis/ghidra.png"
 categories: ["Cybersecurity", "Low level"]
 author: "Nam Nguyen"
 tags: ["Reverse Engineering", "Malware Analysis"]
