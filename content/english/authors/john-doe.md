@@ -13,4 +13,4 @@ social:
     link: https://www.linkedin.com/in/d-nhatthanh-a66662303/
 ---
 
-I'm a Juniors study at CMC University of Technology. I'm passionate about mathematics, computer science and studying to be specialize in machine learning, data science, and software development. Other than tech I also pay a huge interest in psychology, social study and leaning on to see how everthing work. 
+I'm passionate about mathematics, computer science and studying to be specialize in machine learning, data science, and software development. Other than tech I also pay a huge interest in psychology, social study and leaning on to see how everthing work. 
