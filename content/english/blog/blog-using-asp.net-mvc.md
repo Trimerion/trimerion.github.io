@@ -44,11 +44,10 @@ Strategy divide the video into each sections
 + Features included:
 	tag, manage blog (CRUD on blog) and user (CRUD on user)
 
-launchSetting.json
-	contain my connection setting
 
-### Blog WebApp Project Overview
-#### **Project Setup**
+## Blog WebApp Project Overview
+
+### **Project Setup**
 	
 1. **New Project:**
     - Open Visual Studio and click "Create a new project".
@@ -56,7 +55,7 @@ launchSetting.json
     - Name your project (e.g., "MyBlogApp") and choose a suitable location. Click Next.
     - Select an appropriate .NET version (check video for recommended version). Choose "Individual User Accounts" for authentication if you want a user login system. Click "Create"
 
-#### **Database Setup (Entity Framework)**
+### **Database Setup (Entity Framework)**
 
 2. **Data Models:**
     - Create a `Models` folder in your project.
@@ -88,7 +87,7 @@ launchSetting.json
     - Run `Add-Migration InitialCreate`
     - Run `Update-Database`
 
-#### **Controllers**
+### **Controllers**
 	
 5. **Posts Controller:**
     
@@ -98,7 +97,7 @@ launchSetting.json
     
     - Repeat step 6 for your `Tag` model, naming it `TagsController`.
 
-#### **Views**
+### **Views**
 	
 7. **Modify Layout:**
     
@@ -121,7 +120,7 @@ launchSetting.json
 
 ## Project Document
 
-### 1) Model
+### Model
 **DB**
 
 ![Model](/images/blog-using-asp.net-mvc/domainModel.png)
@@ -173,13 +172,13 @@ public string? Heading {get; set}
 ```
 
 
-### 2) Installing Entity Framwork Packages 
+### Installing Entity Framwork Packages 
 ![Packages](/images/blog-using-asp.net-mvc/EF_Package.png)
 
 
 
 
-### 3) Creating DbContext Class
+### Creating DbContext Class
 ![View](/images/blog-using-asp.net-mvc/DbContextClass.png)
 
 > Performing CRUD operations on our database tables using Entity 
@@ -220,7 +219,7 @@ Add ConnectionString into appsetting.json
   }
 }
 ```
-### 4) Inject DbContext Into Our App
+### Inject DbContext Into Our App
 using dependency connection so our application will smartly handle all the connections and instances -> provided data smoothly.
 
 Inject DbConext to tell Program.cs knowing what database it using. 
@@ -232,7 +231,7 @@ builder.Services.AddDbContext<BloggieDbContext>(options =>
 ```
 
 
-### 5) EF Core Migrations
+### EF Core Migrations
 Run this command on Package Manager Console 
 ![Migration Command](/images/blog-using-asp.net-mvc/MigrationCommand.png)
 
@@ -244,7 +243,7 @@ Update
 	Update all the table and column from Migration Folder to the Database (in the connection string)  
 ```
 
-## Section 3: Introduction to MVC: Model View Controllers
+## Introduction to MVC: Model View Controllers
 ![What is MVC](/images/blog-using-asp.net-mvc/WhatIsMVC.png)
 
 
@@ -618,7 +617,7 @@ return RedirectToAction("List", new { id = editTagRequest.Id });
 
 
 
-### 04 - Asynchronous Programming and Repository Pattern
+### Asynchronous Programming and Repository Pattern
 
 #### Asynchronous Programming
 + ? Async Make WebApp go Vrooooooooooooommmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
@@ -906,7 +905,7 @@ public async Task<IActionResult> Add(AddBlogPostsRequest addBlogPostsRequest)
 ```
 
 
-### 004 Saving BlogPost Entity With Tags To The Database
+### Saving BlogPost Entity With Tags To The Database
 
 Create a Responsitory system the same as Tag. Use to save BlogPost datas to the DB.
 
@@ -1047,7 +1046,7 @@ return RedirectToAction("Add");
 
 ## Introduction WYSIWIG and Image Upload
 
-#### WYSIWIG - what you see is what you get
+### WYSIWIG - what you see is what you get
 [Froala](https://froala.com/wysiwyg-editor/docs/overview/)
 ![Froala](/images/blog-using-asp.net-mvc/FroalaWebsite.png)
 
@@ -1080,7 +1079,7 @@ Or
 }
 ```
 
-#### Image Upload
+### Image Upload
 Create a API. Upload Image from the Editor. 
 Create a RestAPI. Call API to our page. Use Upload func to Ipload
 ![Image Upload using API](/images/blog-using-asp.net-mvc/ImageUploadAPI2.png)
@@ -1102,7 +1101,7 @@ Cloudinary cloudinary = new Cloudinary(account);
 
 
 
-#### Image Upload (using API)
+### Image Upload (using API)
 + ! Utimate Goal: Automatically the process of Uploading & Retrieving image URL (using GET and POST method for API)
 	+ ? (POST) Upload Image pushed to Cloudinary API -> Image URL Send back to the Db
 	+ ? (GET) Automatically save image ULR to FeatureImageUrl (as text) 
@@ -1113,7 +1112,7 @@ In this part we will GET (retrieve) image from the API and POST (upload) image t
 To perform this operation
 
 
-###### Create POST Method and Image Repository
+### Create POST Method and Image Repository
 + ? In this part, we want to Connect to Cloudinary and test POST method 
 
 0) Download Cloudinary to NuGet Package
@@ -1252,7 +1251,7 @@ Test result:
 ![Image Url return](/images/blog-using-asp.net-mvc/ImageURLreturn_result.png)
 
 
-###### Upload and Display Image
+#### Upload and Display Image
 > As we previously successfully test POST method. In this part we will implement it into ours Blog for Upload and Display.
 
 1) Create a HTML div to Upload and Display Image.
@@ -1344,11 +1343,11 @@ Test result:
 }
 ```
 
-##### Display Image in WYSIWYG
+#### Display Image in WYSIWYG
 > Tell Froala to use CloudinaryImageController
 
 
-### Display BlogPost and Tag
+## Display BlogPost and Tag
 1 Seeding some Blogs to the Db
 Home page -> show all the Blog in the app
 Routing to show all detail of the BlogPost
@@ -1386,12 +1385,125 @@ public ICollection<Tag> Tags { get; set; }
 ```
 
 
-###### [[BlogPost Design Concept]]
+### BlogPost Design Concept
+```html
+<!-- BlogPosts Container -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            @if (Model != null && Model.Any())
+            {
+                foreach (var blogPost in Model)
+                {
+                    <article class="blog-post mb-5 card">
+                        <div class="card-body">
+                            <header class="blog-post-header">
+                                <h1 class="blog-post-title display-6 mb-4">@blogPost.Heading</h1>
+                                <div class="blog-post-meta text-muted d-flex justify-content-between">
+                                    <span>@blogPost.PublishedDate.ToString("MMMM dd, yyyy")</span>
+                                    <span>@blogPost.Author</span>
+                                </div>
+                            </header>
+
+
+                            <div class="blog-post-content mt-4">
+                                <p class="lead">@blogPost.ShortDescription</p>
+                                <a href="/blog/@blogPost.UrlHandle" class="btn btn-primary">Read More</a>
+                            </div>
+
+                            <footer class="blog-post-footer mt-4">
+                                @if (blogPost.Tags != null && blogPost.Tags.Any())
+                                {
+                                    <div class="blog-post-tags">
+                                        @foreach (var tag in blogPost.Tags)
+                                        {
+                                            <a href="/blog/tag/@tag.Name" class="badge bg-secondary text-decoration-none">@tag.Name</a>
+                                        }
+                                    </div>
+                                }
+                            </footer>
+                        </div>
+                    </article>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+```
+
+**Key Parts of Your BlogPost Design**
+
+1. **BlogPosts Container:** This is the overarching structural element that holds all of your blog post listings.
+```html
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      </div>
+  </div>
+</div>
+```
+
+2. **Blog Article:** Each individual blog post is represented by this section.
+```html
+
+<div class="blog-post-image">
+  <img src="@blogPost.FeaturedImageUrl" alt="@blogPost.Heading" class="img-fluid" />
+</div>
+```
+
+3. **Blog Post Header:** Contains the title, date, and author information.
+```cs
+<header class="blog-post-header">
+    <h1 class="blog-post-title display-6 mb-4">@blogPost.Heading</h1>
+    <div class="blog-post-meta text-muted d-flex justify-content-between">
+        <span>@blogPost.PublishedDate.ToString("MMMM dd, yyyy")</span>
+        <span>@blogPost.Author</span>
+    </div>
+</header>
+
+```
+
+4. **Blog Post Image (Example):** This is where you'd display a featured image.
+```cs
+<div class="blog-post-image">
+    <img src="@blogPost.FeaturedImageUrl" alt="@blogPost.Heading" class="img-fluid" />
+</div>
+```
+
+
+5. **Blog Post Content, Description, Read More (Example):** Includes short description and the 'Read More' button.
+```html
+<div class="blog-post-content mt-4">
+    <p class="lead">@blogPost.ShortDescription</p>
+    <a href="/blog/@blogPost.UrlHandle" class="btn btn-primary">Read More</a>
+</div>
+```
+
+**How to Integrate**
+Here's how you could integrate these new examples into your existing code structure:
+```html
+<article class="blog-post mb-5 card">
+    <div class="card-body">
+     <header class="blog-post-header">
+       </header>
+
+     <div class="blog-post-image">
+         <img src="@blogPost.FeaturedImageUrl" alt="@blogPost.Heading" class="img-fluid" />
+     </div>
+
+     <div class="blog-post-content mt-4">
+       <p class="lead">@blogPost.ShortDescription</p>
+       <a href="/blog/@blogPost.UrlHandle" class="btn btn-primary">Read More</a>
+     </div>
+</article>
+```
 
 **Publish WebMVC (Db include)**  
 Link youtube turtorial : how to connect BlogwebMVC  
 
-#### Authentication and Authorization (using Microsoft.AspNetCore.Identity)
+
+## Authentication and Authorization (using Microsoft.AspNetCore.Identity)
 > Identity library give all funcs for Authen and Autho
 
 0) Create Roles and give superAdmin all roles permission
@@ -1845,7 +1957,7 @@ Register Page
 ```
 
 
-#### Authorization
+### Authorization
 > The process of determining whether a user has access to a particular functionality.
 + Allow user to access to some special pages or not
 ![Authorization to Roles](/images/blog-using-asp.net-mvc/AuthorizationRolesAccess.png)
@@ -1938,8 +2050,8 @@ public async Task<IActionResult> Login(LoginViewModel loginViewModel)
 Authorize User's Role 
 ![Authorize User's Role](/images/blog-site-using-asp.net/AuthorizeUserRole.png)
 
-### Potential Bugs and Notices
-#### **Potential Misalignments**
+## Potential Bugs and Notices
+### **Potential Misalignments**
 1) **HTTP Method Mismatch:** If the form's `method` wasn't set to "post", the controller action wouldn't be triggered due to the `[HttpPost]` requirement. The form must use `method="post"`.
 **Controller**
 ```cs
