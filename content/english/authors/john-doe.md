@@ -1,20 +1,16 @@
 ---
-title: John Doe
-email: johndoe@email.com
-image: "/images/avatar.png"
-description: this is meta description
+title: Dinh Thanh
+email: dinhnhatthanh248@gmail.com
+image: "/images/author-avatar/Heval1st.jpg"
+description: Dinh Thanh's author page
 social:
   - name: github
     icon: fa-brands fa-github
-    link: https://github.com
-
-  - name: twitter
-    icon: fa-brands fa-twitter
-    link: https://twitter.com
+    link: https://github.com/MathmatheticGuy
 
   - name: linkedin
     icon: fa-brands fa-linkedin
-    link: https://linkedin.com
+    link: https://www.linkedin.com/in/d-nhatthanh-a66662303/
 ---
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+I'm a Juniors study at CMC University of Technology. I'm passionate about mathematics, computer science and studying to be specialize in machine learning, data science, and software development. Other than tech I also pay a huge interest in psychology, social study and leaning on to see how everthing work. 
