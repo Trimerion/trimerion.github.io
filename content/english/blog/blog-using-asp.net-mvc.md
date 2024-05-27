@@ -3,7 +3,7 @@ title: "Making an blog site using ASP.NET MVC"
 meta_title: ""
 description: "This is a blog post about how to make an ASP.NET blog site"
 date: 2024-05-27
-image: "/images/blog-using-asp.net-mvc/8bit-waveform.png"
+image: "/images/blog-using-asp.net-mvc/BlogDemo.png"
 categories: ["Web Development"]
 author: "Thanh Dinh"
 tags: ["Web development", "Backend development"]
