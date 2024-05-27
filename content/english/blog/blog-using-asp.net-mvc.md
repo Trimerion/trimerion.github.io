@@ -48,7 +48,7 @@ launchSetting.json
 	contain my connection setting
 
 ### Blog WebApp Project Overview
-**Project Setup**
+#### **Project Setup**
 	
 1. **New Project:**
     - Open Visual Studio and click "Create a new project".
@@ -56,16 +56,14 @@ launchSetting.json
     - Name your project (e.g., "MyBlogApp") and choose a suitable location. Click Next.
     - Select an appropriate .NET version (check video for recommended version). Choose "Individual User Accounts" for authentication if you want a user login system. Click "Create"
 
-**Database Setup (Entity Framework)**
-	
+#### **Database Setup (Entity Framework)**
+
 2. **Data Models:**
-    
     - Create a `Models` folder in your project.
     - Add classes to represent your data:
         - `Post.cs`: (id, title, body, dateCreated, ...etc.)
         - `Tag.cs`: (id, name, displayName)
 3. **Database Context:**
-    
     - Create a new class (e.g., `BlogDbContext.cs`) in your `Models` folder (or a separate `Data` folder)
     - Make it inherit from `DbContext`.
     - Add `DbSet` properties for each model:
@@ -90,7 +88,7 @@ launchSetting.json
     - Run `Add-Migration InitialCreate`
     - Run `Update-Database`
 
-**Controllers**
+#### **Controllers**
 	
 5. **Posts Controller:**
     
@@ -100,7 +98,7 @@ launchSetting.json
     
     - Repeat step 6 for your `Tag` model, naming it `TagsController`.
 
-**Views**
+#### **Views**
 	
 7. **Modify Layout:**
     
@@ -120,21 +118,24 @@ launchSetting.json
 - **Thorough Testing:** Test as you build each feature.
 - **Deployment:** Choose a hosting provider suitable for ASP.NET Core applications (Azure, AWS, or others).
 
-[[Blog WebApp Bugs and Notice]]
-
 
 ## Project Document
 
 ### 1) Model
 **DB**
+
 ![Model](/images/blog-using-asp.net-mvc/domainModel.png)
-	Blog post (m - m) Tag
+
+Blog post (m - m) Tag
 
 
-Create a Folder Domain which store 2 Entity Models 
+**Create a Folder Domain which store 2 Entity Models** 
+
 ![DbContextClass](/images/blog-using-asp.net-mvc/DbContextClass.png)
 
+
 BlogPost
+
 ```cs
 public class BlogPost
 {
@@ -184,7 +185,7 @@ public string? Heading {get; set}
 > Performing CRUD operations on our database tables using Entity 
 Framework Core
 
-Create Data folder to store DbContext (Database Context)
+Create Data folder to store DbContext (Database Context) 
 ![DataFolder](/images/blog-using-asp.net-mvc/DataFolder.png)
 
 ```cs
@@ -232,17 +233,16 @@ builder.Services.AddDbContext<BloggieDbContext>(options =>
 
 
 ### 5) EF Core Migrations
-Run this command on Package Manager Console
+Run this command on Package Manager Console 
 ![Migration Command](/images/blog-using-asp.net-mvc/MigrationCommand.png)
 
-```ad-note
-
+```bash
 Add-Migration "Initial Migration"
-	Create tables using the Data set "DbSet<Models_name> DbSet_Name {get;set}" from the DbContext file 
+Create tables using the Data set "DbSet<Models_name> DbSet_Name {get;set}" from the DbContext file 
 
 Update
 	Update all the table and column from Migration Folder to the Database (in the connection string)  
-
+```
 
 ## Section 3: Introduction to MVC: Model View Controllers
 ![What is MVC](/images/blog-using-asp.net-mvc/WhatIsMVC.png)
@@ -250,7 +250,7 @@ Update
 
 
 ## MODEL (represent the data)
-```ad-note
+```bash
 A class in C# is used to describe a model. Model objects store data 
 retrieved from the database
 ```
@@ -275,7 +275,7 @@ The Folder from View reflect the controller from Controllers folder
 
 **TAG DROPDOWN: Connect link to a Tag** 
 > using asap. 				
-> + asp-controller="AdminTags" -> connect to the controller
+> + asp-    controller="AdminTags" -> connect to the controller
 > + asp-action="Add" -> Action of that controller
 ```html
 <li class="nav-item dropdown">
@@ -1267,7 +1267,7 @@ Test result:
 ```
 
 2) Now we Write a Script to fetch data Image and use POST method to upload it to Cloudinary API Library. Then return its Url and Display it in FeaturedImageDisplay 
-```ad-summary
+```bash
  Scripts Summary:
  FE: Uploaded Image Url save to Featured Image Url input
  BE: fetch our API endpoint 'api/images' and Upload it to CLoudinary API Library using POST method

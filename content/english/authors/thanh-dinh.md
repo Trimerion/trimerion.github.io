@@ -1,8 +1,8 @@
 ---
-title: Dinh Thanh
+title: Thanh Dinh
 email: dinhnhatthanh248@gmail.com
-image: "/images/author-avatar/Heval1st.jpg"
-description: Dinh Thanh's author page
+image: "/images/author-avatar/thanh-dinh-avartar.jpg"
+description: Thanh Dinh's author page
 social:
   - name: github
     icon: fa-brands fa-github
