@@ -4,6 +4,10 @@ email: namberinos@gmail.com
 image: "/images/author-avatar/nam-nguyen-avatar.png"
 description: Nam Nguyen's author page
 social:
+  - name: website
+    icon: fa-solid fa-globe
+    link: https://namberino.github.io
+    
   - name: github
     icon: fa-brands fa-github
     link: https://github.com/namberino
