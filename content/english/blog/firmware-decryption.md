@@ -107,7 +107,7 @@ Since we're trying to decrypt the firmware, let's checkout the function call gra
 
 So this function is directly calling some AES functions from the *OpenSSL* library. So to decrypt this firmware, we can use the *OpenSSL* command-line command in AES mode. However, we need to obtain the key used to encrypt this firmware to decrypt it. 
 
-# Reversing the ecb128Decrypt function
+## Reversing the ecb128Decrypt function
 
 I'll try to reverse engineer this to get the key. We'll start by reversing the `ecb128Decrypt` function:
 
@@ -135,7 +135,7 @@ Here's the renamed and retyped function:
 
 Now, we can say how `ecb128Decrypt` works: It takes in an encrypted input buffer (`decrypt_in`), decrypt it with a key (`decrypt_key`), and output it into an output buffer (`decrypt_out`).
 
-# Reversing the fw_decrypt function
+## Reversing the fw_decrypt function
 
 Now we understand how the `ecb128Decrypt` function (which is the main function used in the `fw_decrypt` function) works, we'll check out the `fw_decrypt` function and see how that works.
 
@@ -348,7 +348,7 @@ print("".join(hex(byte)[2:] for byte in passwd))
 
 This Python line will give us this hex value: *32383837436f6e6e373536340000*.
 
-# The decryption
+## The decryption
 
 Now that we have the key, how do we decrypt this firmware?
 
@@ -394,7 +394,7 @@ Now we have full access to the firmware:
 
 ![decrypted filesystem](/images/firmware-decrypt/nport-firmware-firmware-decrypted-filesystem.png)
 
-# The conclusion
+## The conclusion
 
 That was how to reverse engineer and decrypt an encrypted firmware. We learned a fair about how to analyze a firmware for vulnerabilities and exploit those vulnerabilities.
 
