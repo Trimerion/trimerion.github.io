@@ -95,17 +95,9 @@ We can see here that this binary uses **AES** block encryption algorithm. Specif
 
 ![ghidra fw_decrypt](/images/firmware-decrypt/nport-firmware-ghidra-fw_decrypt.png)
 
-We can also see that there's a function called `fw_decrypt`. This is probably the firmware decrypt function, which means it's quite important in this firmware. Let's see what other functions this `fw_decrypt` function calls:
+We can also see that there's a function called `fw_decrypt`. This is probably the firmware decrypt function, which means it's quite important in this firmware. 
 
-![fw_decrypt call graph](/images/firmware-decrypt/nport-firmware-fw_decrypt-call-graph.png)
-
-`fw_decrypt` is calling 3 other functions: `cal_crc32` (which is used for checksum and data integrity validation), `memcpy` (memory copy), and `ecb128Decrypt` (which is probably the AES 128 ECB mode decrypt function). 
-
-Since we're trying to decrypt the firmware, let's checkout the function call graph of the `ecb128Decrypt` function:
-
-![ecb128decrypt call graph](/images/firmware-decrypt/nport-firmware-ecb128decrypt-call-graph.png)
-
-So this function is directly calling some AES functions from the *OpenSSL* library. So to decrypt this firmware, we can use the *OpenSSL* command-line command in AES mode. However, we need to obtain the key used to encrypt this firmware to decrypt it. 
+After some digging around in the code, I found that the `fw_decrypt` function calls another pretty interesting function called `ecb128Decrypt`. This is probably the AES 128 ECB mode decrypt function. And that function was directly calling some AES functions from the *OpenSSL* library. So to decrypt this firmware, we can use the *OpenSSL* command-line command in AES mode. However, we need to obtain the key used to encrypt this firmware to decrypt it. 
 
 ## Reversing the ecb128Decrypt function
 
